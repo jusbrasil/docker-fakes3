@@ -8,4 +8,7 @@ RUN mkdir -p /var/data/fakes3
 
 EXPOSE 3128
 
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
+
 CMD ["fakes3", "-r", "/var/data/fakes3", "-p", "3128"]
